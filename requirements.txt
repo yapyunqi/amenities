@@ -1,5 +1,5 @@
+fiona
 pandas
 numpy
-matplotlib
-pymc3
+geopandas
 bokeh
