@@ -176,10 +176,6 @@ widgets = column(widgetbox(select), widgetbox(slider))
 layout = row(p, widgets)
 curdoc().add_root(layout)
 
-# Display the current document
-output_notebook()
-show(p)
-
 
 # In[ ]:
 
