@@ -6,8 +6,10 @@
 
 # THE PLOT 
 import math
-import matplotlib.pyplot as plt
+import numpy as np
 import json
+import pandas as pd
+import geopandas as gpd
 from bokeh.io import output_notebook, show, output_file
 from bokeh.plotting import figure
 from bokeh.models import GeoJSONDataSource, LinearColorMapper, ColorBar, NumeralTickFormatter
@@ -21,8 +23,6 @@ from bokeh.layouts import widgetbox, row, column
 
 
 # adding neighborhoods file
-import pandas as pd
-import geopandas as gpd
 nhoods = gpd.read_file("https://raw.githubusercontent.com/yapyunqi/amenities/master/Neighborhoods.geojson")
 nhoods.rename(columns = {'ntaname':'Neighborhood'}, inplace = True)
 nhoods.crs = {'init': 'epsg:4326'}
